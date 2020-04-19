@@ -1,0 +1,26 @@
+.statuses {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-md);
+  flex: 1;
+}
+
+.statusInfo {
+  text-transform: uppercase;
+  margin-bottom: var(--margin-md);
+}
+
+.statusInfo::before {
+  content: "";
+  display: inline-block;
+  background-color: var(--color-attention);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 1px;
+  margin-right: 5px;
+}
+
+.statusInfo.statusInfoAactive::before {
+  background-color: var(--color-status-ok);
+}
